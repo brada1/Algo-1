@@ -42,6 +42,6 @@ while instr >= 0:
     elif instr == 5:
         break
     else:
-        ('1 to 5 only , man')
+        print ('1 to 5 only , man')
         
 
