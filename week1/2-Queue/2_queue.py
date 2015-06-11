@@ -41,7 +41,3 @@ while instr >= 0:
             print (que.index(None))
     elif instr == 5:
         break
-    else:
-        print ('1 to 5 only , man')
-        
-
