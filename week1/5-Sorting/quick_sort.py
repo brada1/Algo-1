@@ -1,7 +1,11 @@
 # http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html
-def quickSort(alist):
-   quickSortHelper(alist,0,len(alist)-1)
-   return (alist)
+
+class QuickSort:
+   # Sorts a sequence of integers.
+   def sort(sequence):
+      """perform quick sort"""
+      quickSortHelper(sequence,0,len(sequence)-1)
+      return (sequence)
 
 def quickSortHelper(alist,first,last):
    if first<last:
@@ -42,4 +46,7 @@ def partition(alist,first,last):
 
 
    return rightmark
+
+##seq = [4, 13, 52, 7, 18, 3, 1, 6]
+##print (QuickSort.sort(seq))
 

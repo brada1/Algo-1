@@ -3,11 +3,11 @@ print ('Benchmarking sorting algorithms...')
 import random, time, sys, os
 if os.getcwd() not in sys.path:
         sys.path.append(os.getcwd())
-from selects import selectSort
-from insert import insertSort
-from merge import mergeSort
-from quick import quickSort
-from count import countSort
+from selection_sort import SelectionSort
+from insertion_sort import InsertionSort
+from merge_sort import MergeSort
+from quick_sort import QuickSort
+from count_sort import CountSort
 
 n = 5                                                   # highest order(+1) of array size
 m = 7                                                   # repeat m times for averaging
@@ -38,21 +38,21 @@ for z in range(0, m):
                 for g in range(1, 6):                                   
                         start = time.clock()                            # get a CPU clock tick
                         if g == 1:
-                                temp = selectSort(dup(alist, arr))
+                                temp = SelectionSort.sort(dup(alist, arr))
                         elif g == 2:
-                                temp = insertSort(dup(alist, arr))
+                                temp = InsertionSort.sort(dup(alist, arr))
                         elif g == 3:
-                                temp = mergeSort(dup(alist, arr))
+                                temp = MergeSort.sort(dup(alist, arr))
                         elif g == 4:
-                                temp = quickSort(dup(alist, arr))
+                                temp = QuickSort.sort(dup(alist, arr))
                         elif g == 5:
-                                temp = countSort(dup(alist, arr))
+                                temp = CountSort.sort(dup(alist, arr))
                         end = time.clock() - start                       # get a CPU clock tick and estimate algorithm r
                         setin(i, end, g)
 
 endit = time.clock() - begin                                             # estimate overal calculation time
 print ('Total time Elapsed:', endit, 'seconds.') 
 
-# show the benchmark table
+# show the benchmark matrix
 for i in range(0, n-1):
         print (times[i])
