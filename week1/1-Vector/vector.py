@@ -1,6 +1,6 @@
 class Vector: 
     global array
-    array = [1, 2, 15, None, None]
+    array = [None]*5
     
     # Adds value at a specific index in the Vector.
     # Complexity: O(n)

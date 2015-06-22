@@ -10,7 +10,7 @@ while instr > 0:
     instr = int(input('(0)EXIT\n(1)INSERT\n(2)ADD\n(3)GET\n(4)REMOVE\n(5)POP\n(6)SIZE\n(7)CAPACITY\n'))
     if instr == 1:
         ind = int(input('Index?\n'))
-        val = input ('Value?\n')
+        val = input('Value?\n')
         print (Vector.insert(ind, val))
     elif instr == 2:
         val = input ('Value?\n')
